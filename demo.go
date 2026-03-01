@@ -13,6 +13,7 @@ func main() {
 	for i := 1; i < len(os.Args); i++ {
 		s += sep + os.Args[i]
 		sep = " "
+		fmt.Println(i, os.Args[i])
 	}
 	fmt.Println(s)
 
@@ -27,4 +28,6 @@ func main() {
 
 	// Version 3: This is clearer, faster, and avoids manual state management.
 	fmt.Println(strings.Join(os.Args[1:], " "))
+
+	fmt.Println(os.Args[0])
 }
